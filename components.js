@@ -173,4 +173,31 @@
   } else {
     document.addEventListener('DOMContentLoaded', inject);
   }
+
+  /* ---------- Canvas favicon (cross-browser) ---------- */
+  (function () {
+    try {
+      var c = document.createElement('canvas');
+      c.width = 32; c.height = 32;
+      var ctx = c.getContext('2d');
+      var g = ctx.createLinearGradient(0, 0, 32, 32);
+      g.addColorStop(0, '#7c3aed');
+      g.addColorStop(1, '#0891b2');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.roundRect(0, 0, 32, 32, 6);
+      ctx.fill();
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.beginPath();
+      ctx.moveTo(19, 3); ctx.lineTo(9, 18); ctx.lineTo(17, 18);
+      ctx.lineTo(13, 29); ctx.lineTo(23, 13); ctx.lineTo(15, 13);
+      ctx.closePath();
+      ctx.fill();
+      var link = document.querySelector('link[rel="icon"]') || document.createElement('link');
+      link.rel = 'icon';
+      link.type = 'image/png';
+      link.href = c.toDataURL('image/png');
+      document.head.appendChild(link);
+    } catch (e) {}
+  })();
 })();
