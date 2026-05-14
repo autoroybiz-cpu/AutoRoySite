@@ -184,8 +184,19 @@
       g.addColorStop(0, '#7c3aed');
       g.addColorStop(1, '#0891b2');
       ctx.fillStyle = g;
+      /* rounded rect without roundRect() for max mobile compat */
+      var r = 6;
       ctx.beginPath();
-      ctx.roundRect(0, 0, 32, 32, 6);
+      ctx.moveTo(r, 0);
+      ctx.lineTo(32 - r, 0);
+      ctx.quadraticCurveTo(32, 0, 32, r);
+      ctx.lineTo(32, 32 - r);
+      ctx.quadraticCurveTo(32, 32, 32 - r, 32);
+      ctx.lineTo(r, 32);
+      ctx.quadraticCurveTo(0, 32, 0, 32 - r);
+      ctx.lineTo(0, r);
+      ctx.quadraticCurveTo(0, 0, r, 0);
+      ctx.closePath();
       ctx.fill();
       ctx.fillStyle = 'rgba(255,255,255,0.95)';
       ctx.beginPath();
