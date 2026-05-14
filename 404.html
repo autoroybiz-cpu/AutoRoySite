@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>404 — הדף לא נמצא | AutoRoy AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <style>
+    .notfound-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 80px;
+    }
+
+    /* Background orbs */
+    .nf-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .nf-orb-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%);
+      top: -100px; right: -80px;
+      animation: orb-drift-1 12s ease-in-out infinite alternate;
+    }
+    .nf-orb-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(6,182,212,0.12) 0%, transparent 70%);
+      bottom: -80px; left: -60px;
+      animation: orb-drift-2 15s ease-in-out infinite alternate;
+    }
+
+    /* Grid mesh */
+    .nf-mesh {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(139,92,246,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139,92,246,0.04) 1px, transparent 1px);
+      background-size: 52px 52px;
+      pointer-events: none;
+    }
+
+    .notfound-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Big 404 number */
+    .nf-number {
+      font-size: clamp(100px, 20vw, 180px);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 60%, #a78bfa 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-shift 4s ease-in-out infinite;
+      margin-bottom: 0;
+      letter-spacing: -4px;
+      position: relative;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50%       { background-position: 100% 50%; }
+    }
+
+    /* Floating bot card */
+    .nf-bot-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(139,92,246,0.25);
+      border-radius: 14px;
+      padding: 12px 20px;
+      margin-bottom: 32px;
+      animation: float-gentle 3s ease-in-out infinite;
+    }
+    @keyframes float-gentle {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-6px); }
+    }
+    .nf-bot-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #f87171;
+      box-shadow: 0 0 0 3px rgba(248,113,113,0.2);
+      animation: pulse-red 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse-red {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(248,113,113,0.2); }
+      50%       { box-shadow: 0 0 0 6px rgba(248,113,113,0.08); }
+    }
+    .nf-bot-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(203,213,225,0.80);
+    }
+    .nf-bot-text span {
+      color: #f87171;
+    }
+
+    .nf-title {
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 800;
+      color: #f1f5f9;
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .nf-sub {
+      font-size: 15px;
+      color: rgba(148,163,184,0.75);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .nf-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Flow visualization */
+    .nf-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 56px;
+      flex-wrap: wrap;
+    }
+    .nf-flow-node {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(148,163,184,0.55);
+      white-space: nowrap;
+    }
+    .nf-flow-node.nf-node-error {
+      border-color: rgba(248,113,113,0.30);
+      color: #f87171;
+      background: rgba(248,113,113,0.06);
+    }
+    .nf-flow-node.nf-node-ok {
+      border-color: rgba(16,185,129,0.30);
+      color: #34d399;
+      background: rgba(16,185,129,0.06);
+    }
+    .nf-flow-arrow {
+      color: rgba(148,163,184,0.25);
+      font-size: 14px;
+    }
+
+    /* Light mode */
+    body.light-mode .nf-number {
+      filter: brightness(0.85);
+    }
+    body.light-mode .nf-title { color: #0f172a; }
+    body.light-mode .nf-sub { color: #64748b; }
+    body.light-mode .nf-bot-card {
+      background: rgba(0,0,0,0.03);
+      border-color: rgba(139,92,246,0.20);
+    }
+    body.light-mode .nf-flow-node { background: rgba(0,0,0,0.03); }
+  </style>
+</head>
+<body>
+
+  <div id="site-navbar"></div>
+
+  <section class="notfound-section" aria-label="שגיאה 404 — דף לא נמצא">
+
+    <div class="nf-mesh" aria-hidden="true"></div>
+    <div class="nf-orb nf-orb-1" aria-hidden="true"></div>
+    <div class="nf-orb nf-orb-2" aria-hidden="true"></div>
+
+    <div class="notfound-inner">
+
+      <div class="nf-bot-card" aria-hidden="true">
+        <span class="nf-bot-dot"></span>
+        <span class="nf-bot-text">AutoRoy Bot: <span>שגיאה — הדף לא נמצא בזרימה</span></span>
+      </div>
+
+      <div class="nf-number" aria-label="שגיאה 404">404</div>
+
+      <h1 class="nf-title">
+        הדף הזה לא קיים —<br />
+        <span class="gradient-text">אבל האוטומציות שלנו כן</span>
+      </h1>
+
+      <p class="nf-sub">
+        יכול להיות שהקישור שגוי, הדף הועבר, או שמישהו שכח לאוטומט את הניווט.<br />
+        בכל מקרה — דף הבית תמיד עובד.
+      </p>
+
+      <div class="nf-actions">
+        <a href="index.html" class="btn btn-primary btn-glow">חזרה לדף הבית</a>
+        <a href="contact.html" class="btn btn-secondary">צרו קשר</a>
+      </div>
+
+      <!-- Decorative flow -->
+      <div class="nf-flow" aria-hidden="true">
+        <div class="nf-flow-node">כניסה לאתר</div>
+        <div class="nf-flow-arrow">←</div>
+        <div class="nf-flow-node">ניתוב</div>
+        <div class="nf-flow-arrow">←</div>
+        <div class="nf-flow-node nf-node-error">404 — לא נמצא</div>
+        <div class="nf-flow-arrow">←</div>
+        <div class="nf-flow-node nf-node-ok">חזרה לבית ✓</div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <div id="site-floating-wa"></div>
+
+  <script src="components.js"></script>
+  <script src="transitions.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

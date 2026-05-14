@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AutoRoy AI — תקנון ומדיניות פרטיות. מידע על איסוף נתונים, זכויות המשתמש, ועמידה בחוק הגנת הפרטיות הישראלי." />
+  <title>תקנון ומדיניות פרטיות | AutoRoy AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="AutoRoy AI" />
+  <meta property="og:title" content="תקנון ומדיניות פרטיות | AutoRoy AI" />
+  <meta property="og:url" content="https://autoroy.co.il/privacy.html" />
+  <meta name="robots" content="noindex, follow" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9Q80YGPEJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9Q80YGPEJ');
+  </script>
+  <style>
+    /* ── Privacy page specific styles ── */
+    .privacy-hero {
+      padding: 120px 0 60px;
+      background: radial-gradient(ellipse 80% 50% at 50% -10%,
+        rgba(139,92,246,0.18) 0%,
+        rgba(6,182,212,0.08) 50%,
+        transparent 100%);
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .privacy-hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(167,139,250,0.85);
+      background: rgba(139,92,246,0.10);
+      border: 1px solid rgba(139,92,246,0.22);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .privacy-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: #f1f5f9;
+      margin-bottom: 12px;
+    }
+    .privacy-hero-meta {
+      font-size: 0.85rem;
+      color: rgba(148,163,184,0.60);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .privacy-hero-meta span { display: flex; align-items: center; gap: 5px; }
+
+    /* ── Content layout ── */
+    .privacy-content { padding: 60px 0 100px; }
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .privacy-grid { grid-template-columns: 1fr; }
+      .privacy-toc { display: none; }
+    }
+
+    /* ── Table of contents ── */
+    .privacy-toc {
+      position: sticky;
+      top: 100px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .privacy-toc-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(148,163,184,0.55);
+      margin-bottom: 14px;
+    }
+    .privacy-toc-list {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .privacy-toc-list a {
+      display: block;
+      font-size: 0.82rem;
+      color: rgba(148,163,184,0.70);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+      line-height: 1.4;
+    }
+    .privacy-toc-list a:hover {
+      background: rgba(139,92,246,0.10);
+      color: #a78bfa;
+    }
+
+    /* ── Article card ── */
+    .privacy-article {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 24px;
+      padding: 48px;
+      line-height: 1.80;
+    }
+    @media (max-width: 600px) { .privacy-article { padding: 28px 20px; } }
+
+    .privacy-section {
+      padding-bottom: 36px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .privacy-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .privacy-section-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(139,92,246,0.7);
+      margin-bottom: 8px;
+    }
+    .privacy-section h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #e2e8f0;
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+    .privacy-section p {
+      font-size: 0.93rem;
+      color: rgba(148,163,184,0.85);
+      margin-bottom: 12px;
+    }
+    .privacy-section p:last-child { margin-bottom: 0; }
+    .privacy-section strong { color: #cbd5e1; font-weight: 600; }
+    .privacy-section a { color: #a78bfa; text-decoration: underline; text-underline-offset: 3px; }
+    .privacy-section a:hover { color: #c4b5fd; }
+
+    .privacy-list {
+      list-style: none;
+      padding: 0; margin: 12px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .privacy-list li {
+      font-size: 0.91rem;
+      color: rgba(148,163,184,0.85);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .privacy-list li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: linear-gradient(135deg, #a78bfa, #06b6d4);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .privacy-highlight {
+      background: rgba(139,92,246,0.08);
+      border: 1px solid rgba(139,92,246,0.18);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .privacy-highlight p {
+      font-size: 0.88rem;
+      color: rgba(167,139,250,0.90);
+      margin: 0;
+    }
+
+    .privacy-contact-box {
+      background: linear-gradient(135deg, rgba(139,92,246,0.10), rgba(6,182,212,0.06));
+      border: 1px solid rgba(139,92,246,0.25);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 16px;
+    }
+    .privacy-contact-box p { font-size: 0.91rem; color: rgba(203,213,225,0.90); margin-bottom: 8px; }
+    .privacy-contact-box p:last-child { margin-bottom: 0; }
+
+    /* Light mode */
+    body.light-mode .privacy-hero { background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139,92,246,0.10) 0%, transparent 100%); }
+    body.light-mode .privacy-hero h1 { color: #0f172a; }
+    body.light-mode .privacy-toc { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); }
+    body.light-mode .privacy-article { background: rgba(255,255,255,0.9); border-color: rgba(0,0,0,0.08); }
+    body.light-mode .privacy-section p { color: #475569; }
+    body.light-mode .privacy-section h2 { color: #0f172a; }
+    body.light-mode .privacy-list li { color: #475569; }
+    body.light-mode .privacy-highlight { background: rgba(139,92,246,0.06); }
+    body.light-mode .privacy-contact-box { background: rgba(139,92,246,0.05); }
+    body.light-mode .privacy-contact-box p { color: #334155; }
+  </style>
+</head>
+<body>
+
+  <div id="site-navbar"></div>
+
+  <!-- ── Hero ── -->
+  <section class="privacy-hero">
+    <div class="container">
+      <div class="privacy-hero-label">מסמך משפטי</div>
+      <h1>תקנון ומדיניות פרטיות</h1>
+      <div class="privacy-hero-meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          עודכן לאחרונה: מאי 2026
+        </span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          תואם לחוק הגנת הפרטיות הישראלי
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Content ── -->
+  <section class="privacy-content">
+    <div class="container">
+      <div class="privacy-grid">
+
+        <!-- Table of Contents -->
+        <aside class="privacy-toc" aria-label="תוכן עניינים">
+          <div class="privacy-toc-title">תוכן עניינים</div>
+          <ul class="privacy-toc-list">
+            <li><a href="#s1">1. כללי ומי אנחנו</a></li>
+            <li><a href="#s2">2. מידע שאנחנו אוספים</a></li>
+            <li><a href="#s3">3. מטרות האיסוף</a></li>
+            <li><a href="#s4">4. בסיס חוקי לעיבוד</a></li>
+            <li><a href="#s5">5. שיתוף עם צדדים שלישיים</a></li>
+            <li><a href="#s6">6. אחסון ואבטחת מידע</a></li>
+            <li><a href="#s7">7. זכויותיך</a></li>
+            <li><a href="#s8">8. עוגיות (Cookies)</a></li>
+            <li><a href="#s9">9. שינויים במדיניות</a></li>
+            <li><a href="#s10">10. יצירת קשר</a></li>
+          </ul>
+        </aside>
+
+        <!-- Article -->
+        <article class="privacy-article">
+
+          <div class="privacy-section" id="s1">
+            <div class="privacy-section-num">סעיף 1</div>
+            <h2>כללי ומי אנחנו</h2>
+            <p>
+              ברוכים הבאים ל-<strong>AutoRoy AI</strong>. שירות זה מופעל על ידי <strong>רוי</strong>,
+              עוסק מורשה הפועל בישראל, המציע שירותי אוטומציה ובינה מלאכותית לעסקים קטנים ובינוניים.
+            </p>
+            <p>
+              מדיניות פרטיות זו מסבירה כיצד אנחנו אוספים, משתמשים, שומרים ומגנים על המידע האישי שאתם
+              מוסרים לנו, בהתאם להוראות <strong>חוק הגנת הפרטיות, התשמ"א-1981</strong> ותקנותיו,
+              לרבות תקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017.
+            </p>
+            <p>
+              השימוש באתר ו/או מסירת פרטים דרכו מהווים הסכמה למדיניות פרטיות זו. אם אינכם מסכימים לתנאים אלו,
+              אנא הימנעו משימוש באתר.
+            </p>
+          </div>
+
+          <div class="privacy-section" id="s2">
+            <div class="privacy-section-num">סעיף 2</div>
+            <h2>מידע שאנחנו אוספים</h2>
+            <p>אנחנו עשויים לאסוף את סוגי המידע הבאים:</p>
+            <ul class="privacy-list">
+              <li><strong>פרטי יצירת קשר:</strong> שם מלא, מספר טלפון, כתובת דוא"ל (אם נמסרה)</li>
+              <li><strong>פרטי עסק:</strong> שם העסק, ענף/תחום פעילות</li>
+              <li><strong>תוכן שיחה:</strong> פרטים שמוסרים בטפסי יצירת קשר לגבי הצרכים העסקיים</li>
+              <li><strong>נתוני גלישה:</strong> כתובת IP, סוג דפדפן, עמודים שנצפו, זמן שהייה באתר (דרך Google Analytics)</li>
+              <li><strong>עוגיות:</strong> קבצי cookie לניתוח ושיפור הגלישה (ראו סעיף 8)</li>
+            </ul>
+            <div class="privacy-highlight">
+              <p>אנחנו לא אוספים פרטי אמצעי תשלום, מספרי תעודת זהות, או מידע רגיש כמוגדר בחוק הגנת הפרטיות.</p>
+            </div>
+          </div>
+
+          <div class="privacy-section" id="s3">
+            <div class="privacy-section-num">סעיף 3</div>
+            <h2>מטרות האיסוף</h2>
+            <p>המידע שאתם מוסרים משמש אך ורק למטרות הבאות:</p>
+            <ul class="privacy-list">
+              <li>יצירת קשר לצורך מתן ייעוץ ומענה לפניות</li>
+              <li>הצגת הצעות לשירותי אוטומציה המתאימים לעסק שלכם</li>
+              <li>ניהול מערכת היחסים העסקית ומעקב אחר פרויקטים</li>
+              <li>שיפור השירות וחוויית המשתמש באתר</li>
+              <li>ציות לדרישות חוקיות ורגולטוריות</li>
+            </ul>
+            <p>לא נשתמש במידע שלכם למטרות שיווקיות ללא הסכמתכם המפורשת.</p>
+          </div>
+
+          <div class="privacy-section" id="s4">
+            <div class="privacy-section-num">סעיף 4</div>
+            <h2>בסיס חוקי לעיבוד המידע</h2>
+            <p>עיבוד המידע האישי שלכם מבוסס על אחד מהבסיסים הבאים:</p>
+            <ul class="privacy-list">
+              <li><strong>הסכמה:</strong> מילוי טופס יצירת הקשר מהווה הסכמה לקבלת מענה ומעקב</li>
+              <li><strong>ביצוע חוזה:</strong> עיבוד הנדרש לצורך מתן השירות המוזמן</li>
+              <li><strong>אינטרס לגיטימי:</strong> שיפור השירות וניהול פעילות עסקית תקינה</li>
+              <li><strong>ציות לחוק:</strong> שמירת רשומות הנדרשת לפי חוקי מס ורגולציה ישראלית</li>
+            </ul>
+          </div>
+
+          <div class="privacy-section" id="s5">
+            <div class="privacy-section-num">סעיף 5</div>
+            <h2>שיתוף מידע עם צדדים שלישיים</h2>
+            <p>
+              אנחנו לא מוכרים, משכירים או מעבירים את המידע האישי שלכם לצדדים שלישיים לצורך שיווק.
+              עם זאת, לצורך מתן השירות אנחנו משתמשים בכלים הבאים שעשויים לעבד מידע:
+            </p>
+            <ul class="privacy-list">
+              <li><strong>Make.com (Integromat):</strong> פלטפורמת אוטומציה — מעביר נתוני טפסים לצורך עיבוד אוטומטי. <a href="https://www.make.com/en/privacy-notice" target="_blank" rel="noopener">מדיניות פרטיות Make.com</a></li>
+              <li><strong>Airtable:</strong> ניהול בסיס נתונים לקוחות. <a href="https://www.airtable.com/privacy" target="_blank" rel="noopener">מדיניות פרטיות Airtable</a></li>
+              <li><strong>WhatsApp Business (Meta):</strong> שליחת הודעות אוטומטיות ויצירת קשר. <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">מדיניות פרטיות WhatsApp</a></li>
+              <li><strong>Google Analytics:</strong> ניתוח תעבורת אתר — ראו סעיף 8. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">מדיניות פרטיות Google</a></li>
+              <li><strong>Google Workspace:</strong> שירותי דוא"ל וניהול מסמכים</li>
+            </ul>
+            <p>
+              כל הכלים הנ"ל עומדים בתקני אבטחת מידע בינלאומיים ומחויבים לעמוד בחוקי הגנת הפרטיות החלים עליהם.
+              העברת מידע לגופים אלו נעשית אך ורק למטרות המפורטות בסעיף 3.
+            </p>
+            <p>
+              אנחנו עשויים לחשוף מידע אם נדרש לכך על פי חוק, צו בית משפט, או כדי להגן על זכויותינו המשפטיות.
+            </p>
+          </div>
+
+          <div class="privacy-section" id="s6">
+            <div class="privacy-section-num">סעיף 6</div>
+            <h2>אחסון ואבטחת המידע</h2>
+            <p>
+              <strong>תקופת שמירה:</strong> המידע שלכם נשמר לתקופה הנדרשת למתן השירות ולצורכי רגולציה,
+              ולא יותר מ-7 שנים ממועד האיסוף (בהתאם לדרישות חוקי המס הישראליים).
+              מידע שלא הוביל לקשר עסקי יימחק תוך 24 חודשים.
+            </p>
+            <p>
+              <strong>אמצעי אבטחה:</strong> אנחנו נוקטים באמצעים טכניים וארגוניים סבירים כדי להגן על המידע
+              מפני גישה בלתי מורשית, שיבוש, גניבה או אובדן, לרבות הצפנת תקשורת (HTTPS), גישה מוגבלת למידע,
+              ועמידה בתקנות אבטחת מידע התשע"ז-2017.
+            </p>
+            <p>
+              יחד עם זאת, אין ביכולתנו להבטיח אבטחה מוחלטת של כל מידע המועבר דרך האינטרנט.
+            </p>
+          </div>
+
+          <div class="privacy-section" id="s7">
+            <div class="privacy-section-num">סעיף 7</div>
+            <h2>זכויותיך כנושא מידע</h2>
+            <p>בהתאם לחוק הגנת הפרטיות הישראלי, עומדות לכם הזכויות הבאות:</p>
+            <ul class="privacy-list">
+              <li><strong>זכות עיון:</strong> לקבל מידע על הנתונים שאנחנו מחזיקים לגביכם</li>
+              <li><strong>זכות תיקון:</strong> לבקש תיקון של מידע שגוי או לא מדויק</li>
+              <li><strong>זכות מחיקה:</strong> לבקש מחיקת המידע, בכפוף לחובות חוקיות</li>
+              <li><strong>זכות התנגדות:</strong> להתנגד לעיבוד המידע לצרכים מסוימים</li>
+              <li><strong>זכות הגבלת עיבוד:</strong> לבקש הגבלה של אופן השימוש במידע</li>
+            </ul>
+            <p>
+              לממש את זכויותיכם, פנו אלינו בדוא"ל <a href="mailto:autoroybiz@gmail.com">autoroybiz@gmail.com</a>
+              עם הבקשה ונשיב תוך 30 יום.
+            </p>
+            <div class="privacy-highlight">
+              <p>
+                אם אינכם מרוצים מהדרך שבה אנחנו מטפלים בפניותיכם, תוכלו לפנות אל
+                <strong>הרשות להגנת הפרטיות</strong> בישראל:
+                <a href="https://www.gov.il/he/departments/the_privacy_protection_authority" target="_blank" rel="noopener">www.gov.il/he/departments/the_privacy_protection_authority</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="privacy-section" id="s8">
+            <div class="privacy-section-num">סעיף 8</div>
+            <h2>עוגיות (Cookies)</h2>
+            <p>
+              האתר משתמש בעוגיות (cookies) — קבצים קטנים המאוחסנים בדפדפן שלכם — לצרכים הבאים:
+            </p>
+            <ul class="privacy-list">
+              <li><strong>Google Analytics (GA4):</strong> ניתוח אנונימי של תעבורת האתר (דפים שנצפו, זמן שהייה, מקורות תנועה). המידע הוא אנונימי ואינו מזהה אתכם באופן אישי.</li>
+              <li><strong>עוגיות session:</strong> לזכירת העדפות הגלישה שלכם (כגון מצב תצוגה בהיר/כהה) לאורך הביקור.</li>
+            </ul>
+            <p>
+              <strong>כיצד לבטל עוגיות:</strong> ניתן לנהל ולבטל עוגיות דרך הגדרות הדפדפן שלכם. שימו לב שביטול
+              עוגיות עשוי להשפיע על חוויית השימוש באתר. לביטול מעקב Google Analytics ספציפית,
+              ניתן להתקין את <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">תוסף ביטול המעקב של Google</a>.
+            </p>
+          </div>
+
+          <div class="privacy-section" id="s9">
+            <div class="privacy-section-num">סעיף 9</div>
+            <h2>שינויים במדיניות הפרטיות</h2>
+            <p>
+              אנחנו שומרים לעצמנו את הזכות לשנות מדיניות זו מעת לעת, בהתאם לשינויים בפעילות עסקית,
+              בחקיקה, או בשירותים שאנחנו מציעים.
+            </p>
+            <p>
+              שינויים מהותיים יפורסמו באתר עם עדכון תאריך "עודכן לאחרונה" בראש המסמך.
+              המשך השימוש באתר לאחר פרסום שינויים מהווה הסכמה למדיניות המעודכנת.
+            </p>
+            <p>
+              אנחנו ממליצים לעיין במדיניות פרטיות זו מעת לעת.
+            </p>
+          </div>
+
+          <div class="privacy-section" id="s10">
+            <div class="privacy-section-num">סעיף 10</div>
+            <h2>יצירת קשר</h2>
+            <p>לכל שאלה, בקשה, או תלונה בנוגע למדיניות פרטיות זו, פנו אלינו:</p>
+            <div class="privacy-contact-box">
+              <p><strong>AutoRoy AI</strong> — עוסק מורשה בישראל</p>
+              <p>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-left:4px;" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                דוא"ל: <a href="mailto:autoroybiz@gmail.com">autoroybiz@gmail.com</a>
+              </p>
+              <p>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-left:4px;" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.8.68H6.72a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.8 8.91a16 16 0 0 0 7 7l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                טלפון: <a href="tel:+972547222023">054-722-2023</a>
+              </p>
+              <p>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-left:4px;" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                וואטסאפ: <a href="https://wa.me/972547222023" target="_blank" rel="noopener">שלחו הודעה</a>
+              </p>
+              <p style="font-size:0.82rem;color:rgba(148,163,184,0.55);margin-top:8px;">נשיב לפניות בתוך 30 ימי עסקים.</p>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <div id="site-floating-wa"></div>
+
+  <script src="components.js"></script>
+  <script src="transitions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
